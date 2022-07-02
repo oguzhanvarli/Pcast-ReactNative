@@ -59,7 +59,7 @@ export default function Login({ navigation }) {
                   <TextInput style={styles.inputEmail} placeholder='E-mail address' value={values.email} onChange={handleChange('email')} />
                   <Feather style={styles.emailIcon} name="mail" size={18} />
                   {errors.email && touched.password ? <Text style={styles.error1}>{errors.email}</Text> : null}
-                  <TextInput style={styles.inputPassword} placeholder='Password' onChange={handleChange('password')} />
+                  <TextInput secureTextEntry={true} style={styles.inputPassword} placeholder='Password' onChange={handleChange('password')} />
                   <FontAwesome5 style={styles.passIcon} name="key" size={18} />
                   {errors.password && touched.password ? <Text style={styles.error2}>{errors.password}</Text> : null}
                   <Button text='Login' onPress={handleSubmit} loading={loading} />
